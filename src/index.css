@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .weatherCardContainer {
+    @apply flex gap-4 flex-wrap items-center justify-center;
+  }
+
+  .weatherCard {
+    @apply border flex flex-col justify-center items-center w-52 p-4 rounded-md cursor-pointer;
+  }
+  .info {
+    @apply flex justify-around w-full pointer-events-none;
+  }
+  .temp {
+    @apply text-center font-bold text-xl pointer-events-none;
+  }
+
+  .description {
+    @apply mb-4 text-lg pointer-events-none;
+  }
+}
