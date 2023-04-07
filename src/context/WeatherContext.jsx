@@ -4,6 +4,7 @@ import { nanoid } from 'nanoid'
 
 const WeatherContext = createContext()
 const URL = 'https://api.openweathermap.org/data/2.5/forecast?'
+const API_KEY = '8de760b4d094d80aa52e5779ef8f5d55'
 export const WeatherProvider = ({ children }) => {
   const [weatherData, setWeatherData] = useState([])
   const [city, setCity] = useState()
@@ -11,9 +12,7 @@ export const WeatherProvider = ({ children }) => {
   useEffect(() => {
     if (city) {
       fetch(
-        `${URL}lat=${city?.latitude}&lon=${city?.longitude}&appid=${
-          import.meta.env.VITE_REACT_API_URL
-        }&units=metric&exclude=current,minutely,hourly&lang=tr`
+        `${URL}lat=${city?.latitude}&lon=${city?.longitude}&appid=${API_KEY}&units=metric&exclude=current,minutely,hourly&lang=tr`
       )
         .then((res) => res.json())
         .then((data) => {
