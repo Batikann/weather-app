@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { useWeather } from '../context/WeatherContext'
 
 export default function SelectBox() {
@@ -11,16 +12,18 @@ export default function SelectBox() {
       }
     }
   }
-  if (navigator.geolocation) {
+
+  useEffect(() => {
     navigator.geolocation.getCurrentPosition((position) => {
       setCity({
         longitude: position.coords.longitude,
         latitude: position.coords.latitude,
       })
     })
-  }
+  }, [])
+
   return (
-    <div className="mb-10">
+    <div className="my-10">
       <select name="cities" id="cities" onChange={cityHandler}>
         <option value="select-city">Select City</option>
         {cities.map((city) => {

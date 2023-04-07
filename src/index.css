@@ -20,4 +20,75 @@
   .description {
     @apply mb-4 text-lg pointer-events-none;
   }
+
+  .header {
+    @apply text-3xl text-white text-center mb-6 uppercase font-bold;
+  }
+
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+  }
+
+  .modalContainer {
+    max-width: 600px;
+    width: 100%;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    background-color: #ffffff;
+    box-shadow: 0 0 18px 0px rgba(0, 0, 0, 0.75);
+    padding: 2rem;
+    align-items: center;
+    column-gap: 1rem;
+  }
+
+  .modalContainer img {
+    @apply w-48 object-cover;
+  }
+
+  .modalRight {
+    @apply w-full;
+  }
+
+  .close-btn {
+    @apply cursor-pointer fixed top-2 right-2;
+  }
+
+  .content {
+    @apply flex justify-between;
+  }
+
+  .detail {
+    @apply flex items-center gap-2;
+  }
+  .first-child {
+    @apply bg-slate-400;
+  }
+
+  @media screen and (max-width: 500px) {
+    .modalContainer {
+      @apply flex-col max-w-[400px];
+    }
+  }
+
+  @media screen and (max-width: 375px) {
+    .modalContainer {
+      @apply flex-col max-w-[300px];
+    }
+    .content {
+      @apply flex-col items-center gap-y-4;
+    }
+    h3 {
+      @apply mb-4 text-center;
+    }
+
+    .content div {
+      @apply border-b border-blue-400 pb-2 justify-center items-center;
+    }
+  }
 }

@@ -24,7 +24,6 @@ export const WeatherProvider = ({ children }) => {
               data: data.list[i],
             })
             setWeatherData(arr)
-            console.log(data)
           }
         })
     }

@@ -4,7 +4,7 @@ import { WeatherProvider } from './context/WeatherContext'
 
 function App() {
   return (
-    <div className="bg-blue-400 min-h-screen flex items-center w-full flex-col p-8">
+    <div className="bg-blue-400 min-h-screen flex items-center w-full flex-col">
       <WeatherProvider>
         <SelectBox />
         <WeatherCard />
