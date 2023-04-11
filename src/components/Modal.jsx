@@ -26,14 +26,14 @@ export default function Modal({ open, weatherDetail, onClose }) {
               <h3>Basınç</h3>
               <p className="detail">
                 <WiBarometer size={25} />
-                {weatherDetail?.data?.main?.pressure}
+                {weatherDetail?.data?.main?.pressure}hPa
               </p>
             </div>
             <div className="wind">
               <h3>Rüzgar Hızı</h3>
               <p className="detail">
                 <WiStrongWind size={25} />
-                {weatherDetail?.data?.wind?.speed}
+                {weatherDetail?.data?.wind?.speed}km/sa
               </p>
               <p className="detail">
                 <WiDirectionUpRight size={25} />
@@ -44,18 +44,17 @@ export default function Modal({ open, weatherDetail, onClose }) {
               <h3>Sıcaklık</h3>
               <p className="detail">
                 <WiThermometerExterior size={25} />
-                {weatherDetail?.data?.main?.temp_min.toFixed(0)}
+                {weatherDetail?.data?.main?.temp_min.toFixed(0)}&#176;C
               </p>
               <p className="detail">
                 <WiThermometer size={25} />
-                {weatherDetail?.data?.main?.temp_max.toFixed(0)}
+                {weatherDetail?.data?.main?.temp_max.toFixed(0)}&#176;C
               </p>
             </div>
             <div className="humidity">
               <h3>Nem</h3>
               <p className="detail">
-                <WiHumidity size={25} />
-                {weatherDetail?.data?.main?.humidity}
+                <WiHumidity size={25} />%{weatherDetail?.data?.main?.humidity}
               </p>
             </div>
           </div>

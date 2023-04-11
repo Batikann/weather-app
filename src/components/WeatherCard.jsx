@@ -14,6 +14,7 @@ export default function WeatherCard() {
     }
     setOpenModal(!openModal)
   }
+  console.log(weatherData)
   return (
     <>
       <div className="header">{weatherData[0]?.cityName}</div>
