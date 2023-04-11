@@ -10,4 +10,5 @@ Live Demo == > https://patikapractiumweatherapp.netlify.app/
 <li>Context Api</li>
 <li>TailwindCss</li>
 <li>OpenWeatherMap API</li>
+<li>Nanoid</li>
 </ul>
